@@ -1,0 +1,155 @@
+# =====================================
+# Ruby / Rails
+# =====================================
+
+# Ignore bundler config
+/.bundle
+
+# Ignore all logfiles and tempfiles
+/log/*
+!/log/.keep
+/tmp/*
+!/tmp/.keep
+
+# Ignore pidfiles, but keep the directory
+/tmp/pids/*
+!/tmp/pids/.keep
+
+# Ignore storage (Active Storage, SQLite, cache)
+/storage/*
+!/storage/.keep
+
+# Ignore master key for decrypting credentials and more
+/config/master.key
+
+# Ignore byebug/debug history
+.byebug_history
+.irb_history
+.pry_history
+
+# Ignore precompiled assets
+/public/assets
+
+# =====================================
+# Node / Bun / JavaScript
+# =====================================
+
+# Dependencies
+/node_modules
+
+# Build outputs
+/app/assets/builds/*
+!/app/assets/builds/.keep
+
+# NPM/Yarn/Bun debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+bun-debug.log*
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Vite (if accidentally created)
+/public/vite*
+
+# Tailwind output
+/app/assets/builds/*.css
+!/app/assets/builds/.keep
+
+# =====================================
+# Environment Variables
+# =====================================
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# =====================================
+# IDE / Editor
+# =====================================
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains (RubyMine, WebStorm, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.#*
+
+# =====================================
+# macOS
+# =====================================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails
+Thumbs.db
+
+# =====================================
+# Testing
+# =====================================
+
+# Coverage reports
+/coverage/
+.simplecov
+
+# RSpec parallel
+/tmp/parallel_tests/
+
+# Capybara screenshots
+/tmp/capybara/
+
+# =====================================
+# Miscellaneous
+# =====================================
+
+# Ignore Spring files
+/spring/*.pid
+
+# Ignore uploaded files in development test
+/public/uploads
+
+# Sidekiq dump
+sidekiq.dump
+
+# Redis dump
+dump.rdb
+
+# Ignore docker volume data
+/docker/volumes/
+
+# Ignore local configuration overrides
+/config/settings.local.yml
+/config/settings/*.local.yml
+
+# Keep directories with .keep files
+!.keep
+!.gitkeep

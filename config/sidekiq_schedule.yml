@@ -1,0 +1,9 @@
+# Sidekiq Cron Schedule
+# See: https://github.com/sidekiq-cron/sidekiq-cron
+
+# Example: Clean up completed todos daily at 3am
+todo_cleanup:
+  cron: "0 3 * * *"
+  class: "TodoCleanupJob"
+  queue: "low"
+  description: "Clean up old completed todos"

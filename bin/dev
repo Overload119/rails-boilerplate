@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+if ! gem list foreman -i --silent; then
+  echo "Installing foreman..."
+  gem install foreman
+fi
+
+# Build assets once before starting
+bun run build
+
+# Start all services with foreman
+exec foreman start -f Procfile.dev "$@"

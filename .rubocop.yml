@@ -1,0 +1,113 @@
+# Shopify Ruby Style Guide
+# https://ruby-style-guide.shopify.dev/
+inherit_gem:
+  rubocop-shopify: rubocop.yml
+
+plugins:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-rspec_rails
+  - rubocop-capybara
+  - rubocop-factory_bot
+  - rubocop-sorbet
+
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+  TargetRubyVersion: 3.2
+  Exclude:
+    - "bin/**/*"
+    - "db/schema.rb"
+    - "node_modules/**/*"
+    - "tmp/**/*"
+    - "vendor/**/*"
+    - "sorbet/**/*"
+
+# ============================================================================
+# Project-specific overrides
+# ============================================================================
+
+# Allow slightly longer lines for readability
+Layout/LineLength:
+  Max: 120
+  AllowedPatterns:
+    - '^\s*#'  # Allow long comments
+    - 'https?://'  # Allow long URLs
+
+# Relax method length for controllers with multiple actions
+Metrics/MethodLength:
+  Max: 25
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+    - method_call
+
+Metrics/ClassLength:
+  Max: 200
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+    - "config/routes.rb"
+    - "config/environments/*.rb"
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+
+Metrics/AbcSize:
+  Max: 30
+
+# ============================================================================
+# Rails
+# ============================================================================
+
+# Disable i18n locale text requirement for simple apps/boilerplates
+Rails/I18nLocaleTexts:
+  Enabled: false
+
+# ============================================================================
+# RSpec
+# ============================================================================
+RSpec/ExampleLength:
+  Max: 20
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+
+RSpec/MultipleExpectations:
+  Max: 5
+
+RSpec/NestedGroups:
+  Max: 4
+
+RSpec/DescribeClass:
+  Exclude:
+    - "spec/requests/**/*"
+    - "spec/system/**/*"
+    - "spec/features/**/*"
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 10
+
+# ============================================================================
+# Sorbet
+# ============================================================================
+Sorbet/FalseSigil:
+  Enabled: true
+
+Sorbet/ValidSigil:
+  Enabled: true
+  RequireSigilOnAllFiles: false
+
+Sorbet/StrictSigil:
+  Enabled: false
+
+Sorbet/EnforceSigilOrder:
+  Enabled: true

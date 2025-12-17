@@ -1,0 +1,40 @@
+{
+  "name": "rails-boilerplate",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun run build:js && bun run build:css",
+    "build:js": "bun build app/javascript/inertia.tsx --outdir=app/assets/builds --minify --target=browser",
+    "build:css": "bunx @tailwindcss/cli -i app/javascript/styles/application.css -o app/assets/builds/application.css --minify",
+    "build:dev": "bun run build:js:dev && bun run build:css:dev",
+    "build:js:dev": "bun build app/javascript/inertia.tsx --outdir=app/assets/builds --sourcemap --target=browser",
+    "build:css:dev": "bunx @tailwindcss/cli -i app/javascript/styles/application.css -o app/assets/builds/application.css",
+    "format": "prettier --write \"app/javascript/**/*.{ts,tsx,js,jsx,css,json}\"",
+    "format:check": "prettier --check \"app/javascript/**/*.{ts,tsx,js,jsx,css,json}\"",
+    "format:ruby": "prettier --write \"**/*.rb\" \"Gemfile\" \"Rakefile\"",
+    "format:ruby:check": "prettier --check \"**/*.rb\" \"Gemfile\" \"Rakefile\"",
+    "lint": "bun run format:check && bun run typecheck",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@inertiajs/react": "^1.2.0",
+    "@radix-ui/react-checkbox": "^1.1.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.5"
+  },
+  "devDependencies": {
+    "@prettier/plugin-ruby": "^4.0.4",
+    "@tailwindcss/cli": "^4.0.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.6.3"
+  }
+}

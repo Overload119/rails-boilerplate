@@ -1,0 +1,4 @@
+web: bin/rails server -p 3000
+js: bun run build:js:dev --watch
+css: bun run build:css:dev --watch
+worker: bundle exec sidekiq

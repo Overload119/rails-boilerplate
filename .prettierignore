@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+app/assets/builds/
+public/assets/
+tmp/
+
+# Package manager
+bun.lock
+
+# Ruby/Rails
+vendor/
+coverage/
+log/
+storage/
+
+# Sorbet
+sorbet/
+
+# Generated files
+*.min.js
+*.min.css
+db/schema.rb
+bin/
