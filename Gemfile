@@ -91,3 +91,6 @@ group :test do
 end
 
 gem 'ruby_llm', '~> 1.9'
+
+# File uploads with Shrine
+gem 'shrine', '~> 3.6'

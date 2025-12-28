@@ -23,7 +23,6 @@ Use binstubs when available (`bin/rails`, `bin/rubocop`, etc.).
 - Common env vars used by this app:
   - **Database**: `POSTGRES_HOST`, `POSTGRES_USER`, `POSTGRES_PASSWORD`, `RAILS_MAX_THREADS`
   - **Redis/Sidekiq**: `REDIS_URL`, `SIDEKIQ_CONCURRENCY`
-  - **Jobs (Solid Queue config exists too)**: `JOB_CONCURRENCY`
 
 3) Prepare DB
 - `bin/rails db:prepare`
