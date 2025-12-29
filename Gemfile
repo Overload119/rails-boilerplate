@@ -72,7 +72,7 @@ group :development, :test do
 
   # Sorbet type checking
   gem 'sorbet', '~> 0.5.11422', require: false
-  gem 'tapioca', '~> 0.13.0', require: false
+  gem 'tapioca', '~> 0.16.11', require: false
 end
 
 # Sorbet runtime (needed in all environments)
