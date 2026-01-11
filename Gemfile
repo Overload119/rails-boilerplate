@@ -19,9 +19,6 @@ gem 'http'
 # Inertia.js Rails adapter
 gem 'inertia_rails', '~> 3.6'
 
-# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[windows jruby]
 gem 'dotenv', groups: %i[development test]
@@ -94,3 +91,6 @@ gem 'ruby_llm', '~> 1.9'
 
 # File uploads with Shrine
 gem 'shrine', '~> 3.6'
+
+# Friendly URLs with slugs
+gem 'friendly_id', '~> 5.5'

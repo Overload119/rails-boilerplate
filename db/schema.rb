@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_12_17_173810) do
+ActiveRecord::Schema[8.0].define(version: 2025_12_28_154241) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -24,6 +24,23 @@ ActiveRecord::Schema[8.0].define(version: 2025_12_17_173810) do
     t.index ["version"], name: "index_ai_prompt_pairs_on_version"
   end
 
+  create_table "books", force: :cascade do |t|
+    t.string "title", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.bigint "book_id", null: false
+    t.text "content"
+    t.integer "position", null: false
+    t.jsonb "image_data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id", "position"], name: "index_pages_on_book_id_and_position", unique: true
+    t.index ["book_id"], name: "index_pages_on_book_id"
+  end
+
   create_table "todos", force: :cascade do |t|
     t.string "title", null: false
     t.boolean "completed", default: false, null: false
@@ -33,4 +50,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_12_17_173810) do
     t.index ["completed"], name: "index_todos_on_completed"
     t.index ["position"], name: "index_todos_on_position"
   end
+
+  add_foreign_key "pages", "books"
 end

@@ -13,6 +13,7 @@ export interface AppMeta {
 export interface SharedProps {
   flash: FlashMessages
   app: AppMeta
+  [key: string]: unknown
 }
 
 // Todo types

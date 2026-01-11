@@ -4,10 +4,12 @@ import { createInertiaApp } from '@inertiajs/react'
 
 // Import all pages explicitly (Bun doesn't support import.meta.glob)
 import TodosIndex from './pages/Todos/Index'
+import StorybooksIndex from './pages/Storybooks/Index'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const pages: Record<string, React.ComponentType<any>> = {
   'Todos/Index': TodosIndex,
+  'Storybooks/Index': StorybooksIndex,
 }
 
 createInertiaApp({

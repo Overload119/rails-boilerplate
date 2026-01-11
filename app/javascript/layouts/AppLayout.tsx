@@ -40,9 +40,6 @@ export default function AppLayout({ children, title }: AppLayoutProps) {
           </div>
 
           {children}
-
-          {/* Footer */}
-          <p className="mt-8 text-center text-xs text-slate-600">Double-click to edit a todo</p>
         </div>
       </div>
     </div>

@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+My boilerplate and preferred tech stack for building new projects.
 
-Things you may want to cover:
+## Frontend
 
-* Ruby version
+## Backend
 
-* System dependencies
+- Ruby
+  - Ruby on Rails
+    - Shrine
+    - Intertia
+    - Sorbet
+      - Tapioca
+- Redis
+  - Sidekiq
+- Bun
+  - ReactQuery
+  - React
+  - Shadcn
+    - bunx shadcn@latest add
+    - bunx shadcn@latest add <component-name>
 
-* Configuration
+## Preqrequisites
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- After cloning:
+- Run `bin/dev` to start development. This starts `overmind`
