@@ -37,7 +37,7 @@ gem 'thruster', require: false
 
 # Background job processing with Sidekiq
 gem 'sidekiq', '~> 7.2'
-gem 'sidekiq-cron', '~> 1.12'
+gem 'sidekiq-cron', '~> 2.3'
 gem 'sidekiq-unique-jobs', '~> 8.0'
 
 # Redis for Sidekiq
